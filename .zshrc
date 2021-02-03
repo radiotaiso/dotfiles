@@ -100,6 +100,8 @@ ZSH_DISABLE_COMPFIX="true"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias la="ls -hal"
+alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
+alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperature'"
 
 ### Functions?
 mkfile() {mkdir -p $(sed 's/\(.*\)\/.*/\1/' <<< $1) && touch $1}
