@@ -5,10 +5,7 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
-########## Variables
-#***********************
-#*REMEMBER TO FIX PATHS*
-#***********************
+########## Setup
 
 # dotfiles directory
 gitdir=$(pwd)
@@ -26,7 +23,7 @@ cd $gitdir
 olddir=$gitdir/backups
 echo "$olddir olddir set \n"
 
-##########
+########## Execution
 
 # create dotfiles_old in homedir
 mkdir -p $olddir
