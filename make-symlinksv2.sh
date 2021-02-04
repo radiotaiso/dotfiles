@@ -29,18 +29,18 @@ echo "$olddir olddir set \n"
 ##########
 
 # create dotfiles_old in homedir
-# mkdir -p $olddir
-echo -n "SET $olddir for backup of any existing dotfiles in ~ \n"
+mkdir -p $olddir
+echo "SET $olddir for backup of any existing dotfiles in ~ \n"
 
 # change to the dotfiles directory
-# cd $dir
-echo -n "CDd to the $dir directory \n"
+cd $dir
+echo "CDd to the $dir directory \n"
 
 # move any existing dotfiles in homedir to dotfiles_old directory (they need to start with .)
 # then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving $file from ~ to $olddir \n"
-    # mv ~/.$file $olddir
+    mv ~/.$file $olddir
     echo "Creating symlink to (dot)$file in home directory from $dir/$file \n"
-    # ln -s $dir/$file ~/.$file
+    ln -s $dir/$file ~/.$file
 done
