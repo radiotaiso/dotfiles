@@ -3,7 +3,7 @@ Simple backup and deploy
 
 ## Things to consider
 
-- This will only replace dotfiles found in the `files` directory to your local and ignore everything else
+- This will only replace dotfiles found in the `files` directory to your `$HOME` directory and ignore everything else
 - dotfiles inside `.config` or other nested directories are still out of scope
 - Your old dotfiles are NOT deleted, they are relocated to `dotfiles/backups`
 
