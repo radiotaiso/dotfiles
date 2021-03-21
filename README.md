@@ -7,13 +7,6 @@ Simple backup and deploy
 - dotfiles inside `.config` or other nested directories are still out of scope
 - Your old dotfiles are NOT deleted, they are relocated to `dotfiles/backups`
 
-## How to use
-1. Clone repo
-2. Grant execution permissions with ```chmod +x make-symlinksv2.sh```
-3. Run `./make-symlinksv2.sh`
-4. ??????
-5. PROFIT!
-
 ## Steps to bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
@@ -23,10 +16,15 @@ xcode-select --install
 ```
 
 2. Clone repo into new hidden directory. 
+3. 
+```zsh
+git clone git@github.com:UpsetPelican/dotfiles.git .dotfiles
+```
 
 3. Create symlinks in the Home directory to the real files in the repo.
 
 ```zsh
+chmod +x make-symlinksv2.sh
 ./make-symlinksv2.sh
 ```
 
