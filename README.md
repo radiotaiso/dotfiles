@@ -1,12 +1,6 @@
 # dotfiles
 Simple backup and deploy
 
-## Things to consider
-
-- This will only replace dotfiles found in the `files` directory to your `$HOME` directory and ignore everything else
-- dotfiles inside `.config` or other nested directories are still out of scope
-- Your old dotfiles are NOT deleted, they are relocated to `dotfiles/backups`
-
 ## Steps to bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
@@ -16,7 +10,7 @@ xcode-select --install
 ```
 
 2. Clone repo into new hidden directory. 
-3. 
+
 ```zsh
 git clone git@github.com:UpsetPelican/dotfiles.git .dotfiles
 ```
@@ -25,19 +19,19 @@ git clone git@github.com:UpsetPelican/dotfiles.git .dotfiles
 
 ```zsh
 chmod +x make-symlinksv2.sh
-./make-symlinksv2.sh
+./make-symlinksv2.sh # Backups are stored in dotfiles/backups
 ```
 
 4. Install Homebrew, followed by the software listed in the Brewfile.
 
 ```zsh
 # These could also be in an install script.
-cd .dotfiles
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cd .dotfiles
 # Install brewfile
 brew bundle
-# Oh my zsh
+# Install Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
