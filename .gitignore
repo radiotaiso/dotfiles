@@ -1,5 +1,7 @@
 # Don't upload backed up files
 backups/
 
+# Results locks and generated data
 Brewfile.lock.json
 .DS_Store
+files/spicetify_data/spicetify_data
