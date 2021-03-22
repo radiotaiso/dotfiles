@@ -1,2 +1,5 @@
 # Don't upload backed up files
 backups/
+
+Brewfile.lock.json
+.DS_Store
