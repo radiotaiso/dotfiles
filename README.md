@@ -38,7 +38,7 @@ cd .dotfiles
 brew bundle
 ```
 
-Troubleshooting
+## Troubleshooting
 
 You were using github but moved to gitlab? 
 
