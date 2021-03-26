@@ -35,6 +35,16 @@ brew bundle
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+Troubleshooting
+
+You were using github but moved to gitlab? 
+
+```
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@<newrepo>
+```
+
 
 #### Source
 - [Managing Your Dotfiles With Git](https://medium.com/better-programming/managing-your-dotfiles-with-git-4dee603a19a2)
