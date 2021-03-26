@@ -26,13 +26,16 @@ chmod +x make-symlinksv2.sh
 
 ```zsh
 # These could also be in an install script.
+
+# Install Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 cd .dotfiles
+
 # Install brewfile
 brew bundle
-# Install Oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 Troubleshooting
