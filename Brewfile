@@ -1,11 +1,11 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Distributed revision control system
 brew "git"
-# UNIX shell (command interpreter)
+brew "neovim"
+brew "node"
 brew "zsh"
 cask "alfred"
+cask "telegram"
 cask "visual-studio-code"

@@ -105,3 +105,6 @@ alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperat
 
 ### Functions?
 mkfile() {mkdir -p $(sed 's/\(.*\)\/.*/\1/' <<< $1) && touch $1}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

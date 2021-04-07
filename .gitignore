@@ -5,3 +5,4 @@ backups/
 Brewfile.lock.json
 .DS_Store
 files/spicetify_data/spicetify_data
+files/vscode/extensions
