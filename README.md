@@ -7,7 +7,7 @@ Now with `/etc` scripts support!
 
 Inside of you there are two ~~wolves~~ branches `macos` and `linux`.
 
-One is too lazy to use a single script bc paths are different in some config files and the other one can't be bothered to manually type it each time depending on which system so it's easier just to checkout the required branch.
+One is too lazy to use a single script because paths are different in some config files and the other one can't be bothered to manually type it each time depending on which system so it's easier just to checkout the required branch.
 
 ![dumb wolf gif](https://media1.tenor.com/images/e8cce4809ee3c6f3ee954ea6e25cd52f/tenor.gif?itemid=8702502)
 
