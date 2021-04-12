@@ -1,6 +1,3 @@
-# dotfiles
-Simple backup and deploy
-
 ## Steps to bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
@@ -37,18 +34,3 @@ cd .dotfiles
 # Install brewfile
 brew bundle
 ```
-
-## Troubleshooting
-
-You were using github but moved to gitlab? 
-
-```
-cd existing_repo
-git remote rename origin old-origin
-git remote add origin git@<newrepo>
-```
-
-
-#### Source
-- [Managing Your Dotfiles With Git](https://medium.com/better-programming/managing-your-dotfiles-with-git-4dee603a19a2)
-- [Beyond Dotfiles by Fireshipio](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
