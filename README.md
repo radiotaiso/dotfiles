@@ -11,15 +11,28 @@ One is too lazy to use a single script because paths are different in some confi
 
 ![dumb wolf gif](https://media1.tenor.com/images/e8cce4809ee3c6f3ee954ea6e25cd52f/tenor.gif?itemid=8702502)
 
-## Troubleshooting
+# Troubleshooting
 
-You were using github but moved to gitlab? 
+## Git Tips and Tricks
+
+### Moved from github to gitlab?
 
 ```
 cd existing_repo
 git remote rename origin old-origin
 git remote add origin git@<newrepo>
 ```
+
+### Need to override os default git user? try local
+
+Git user and email is defined on each branch, `salsa for linux` and `github for macos`, talk about happy coincidences, huh.
+
+If you need to use different emails, you must set up each repo with a local configuration file
+```
+git config --local user.name "Your Name"
+git config --local user.email "email@example.com"
+```
+The local config will overwrite the global config. So you can use a global config for the most used account.
 
 
 #### Source
