@@ -45,3 +45,13 @@ brew bundle
 cd ~/.dotfiles 
 brew bundle dump
 ```
+
+## MacOS tips 
+
+```
+# Fuck autoboot, all my homies have to push the button to boot
+sudo nvram AutoBoot=%00 # Disable, %03 is default for enabled
+
+# Silent boot? Hell yeah
+sudo nvram BootAudio=%01 # Disabled is %00
+```
