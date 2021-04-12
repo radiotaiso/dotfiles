@@ -17,8 +17,8 @@ git checkout macos
 3. Create symlinks in the Home directory to the real files in the repo.
 
 ```zsh
-chmod +x make-symlinksv2.sh
-./make-symlinksv2.sh # Backups are stored in dotfiles/backups
+chmod +x make-dot-symlinks.sh
+./make-dot-symlinks.sh # Backups are stored in dotfiles/backups
 ```
 
 4. Install Homebrew, followed by the software listed in the Brewfile.
