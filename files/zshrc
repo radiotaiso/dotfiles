@@ -99,7 +99,7 @@ ZSH_DISABLE_COMPFIX="true"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias la="ls -hal"
+alias ll="ls -hal"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
 alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperature'"
 
@@ -108,3 +108,8 @@ mkfile() {mkdir -p $(sed 's/\(.*\)\/.*/\1/' <<< $1) && touch $1}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# This function saves lives. thank god is stored here f o r e v e r.
+compresspdf() {
+    echo 'Usage: compresspdf [input file] [output file] [screen|ebook|printer|prepress]'
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
+}
