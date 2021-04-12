@@ -1,42 +1,15 @@
 # dotfiles
-Simple backup and deploy
+~~Simple~~ backup and deploy system settings
 
-## Steps to bootstrap a new Mac
+Now with `/etc` scripts support!
 
-1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
+# WTF IS THIS
 
-```zsh
-xcode-select --install
-```
+Inside of you there are two ~~wolves~~ branches `macos` and `linux`.
 
-2. Clone repo into new hidden directory. 
+One is too lazy to use a single script bc paths are different in some config files and the other one can't be bothered to manually type it each time depending on which system so it's easier just to checkout the required branch.
 
-```zsh
-git clone git@github.com:UpsetPelican/dotfiles.git .dotfiles
-```
-
-3. Create symlinks in the Home directory to the real files in the repo.
-
-```zsh
-chmod +x make-symlinksv2.sh
-./make-symlinksv2.sh # Backups are stored in dotfiles/backups
-```
-
-4. Install Homebrew, followed by the software listed in the Brewfile.
-
-```zsh
-# These could also be in an install script.
-
-# Install Oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-cd .dotfiles
-
-# Install brewfile
-brew bundle
-```
+![dumb wolf gif](https://media1.tenor.com/images/e8cce4809ee3c6f3ee954ea6e25cd52f/tenor.gif?itemid=8702502)
 
 ## Troubleshooting
 
