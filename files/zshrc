@@ -37,7 +37,7 @@ ZSH_DISABLE_COMPFIX="true"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias ll="ls -hal"
+alias ll="exa -hal"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
 alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperature'"
 alias gitlog="git log --oneline --decorate --graph"
