@@ -1,7 +1,7 @@
 ## https://blog.carbonfive.com/writing-zsh-themes-a-quickref/
 ## Reference to tune this
 
-local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ %s)"
+local ret_status="%(?:%{$fg_bold[green]%}λ:%{$fg_bold[red]%}λ %s)"
 
 function get_pwd(){
   git_root=$PWD
@@ -18,7 +18,7 @@ function get_pwd(){
   echo $prompt_short_dir
 }
 
-PROMPT='$ret_status %{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%} '
+PROMPT='$ret_status %{$fg[white]%}$(get_pwd) %{$fg_bold[cyan]%}:: $(git_prompt_info)%{$reset_color%}%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
