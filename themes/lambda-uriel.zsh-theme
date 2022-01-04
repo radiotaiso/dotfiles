@@ -1,7 +1,7 @@
 ## https://blog.carbonfive.com/writing-zsh-themes-a-quickref/
 ## Reference to tune this
 
-local ret_status="%(?:%{$fg_bold[green]%}λ:%{$fg_bold[red]%}λ %s)"
+local ret_status="%(?:%{$fg_bold[green]%}λ:%{$fg_bold[red]%}λ%s)"
 
 function get_pwd(){
   git_root=$PWD
