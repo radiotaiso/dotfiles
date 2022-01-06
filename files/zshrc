@@ -41,6 +41,9 @@ ZSH_DISABLE_COMPFIX="true"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# Lyft
+alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
+
 # misc
 alias ll="exa -hal --color=always --group-directories-first"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
