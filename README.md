@@ -11,7 +11,7 @@ xcode-select --install
 ```zsh
 git clone git@salsa.debian.org:uriel/dotfiles.git .dotfiles
 cd .dotfiles
-git checkout macos
+git checkout macos-lyft
 ```
 
 3. Create symlinks in the Home directory to the real files in the repo.
@@ -36,6 +36,7 @@ cd .dotfiles
 # Install brewfile
 brew bundle
 ```
+
 # Useful extras
 
 ## How to update brewfile
@@ -53,5 +54,5 @@ brew bundle dump
 sudo nvram AutoBoot=%00 # Disable, %03 is default for enabled
 
 # Silent boot? Hell yeah
-sudo nvram BootAudio=%01 # Disabled is %00
+sudo nvram BootAudio=%00 # Disable, enabled is %01
 ```
