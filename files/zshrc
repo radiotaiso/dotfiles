@@ -51,6 +51,7 @@ alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperat
 alias nukenpm="rm -rf node_modules/ && rm package-lock.json"
 alias ptm="sudo !!"
 alias cat="bat --paging=never"
+alias vim="nvim"
 
 # git
 alias addup='git add -u'
@@ -104,3 +105,4 @@ ex ()
   fi
 }
 
+PATH=$PATH:/Users/uriel/.lyftkube-bin
