@@ -43,6 +43,8 @@ ZSH_DISABLE_COMPFIX="true"
 
 # Lyft
 alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
+alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
+alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
 
 # misc
 alias ll="exa -hal --color=always --group-directories-first"
