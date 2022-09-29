@@ -5,8 +5,21 @@
 export ZSH="/Users/uriel/.oh-my-zsh"
 
 # go/Lyftenv
+PATH=$PATH:/Users/uriel/.lyftkube-bin
 export PATH=$HOME/src/lyftvenv/bin:$PATH 
 eval "$(/opt/lyft/brew/bin/aactivator init)"
+# This secret line of code will help us 
+# save a fuck ton of cpu sorry employer wasnt me 
+#         .-"""-.
+#        /       \
+#        \       /
+# .-"""-.-`.-.-.<  _
+#/      _,-\ ()()_/:)
+#\     / ,  `     `|
+# '-..-| \-.,___,  /
+#       \ `-.__/  /
+#        `-.__.-'`
+alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -44,7 +57,6 @@ ZSH_DISABLE_COMPFIX="true"
 # Lyft
 alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
 alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
-alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
 
 # misc
 alias ll="exa -hal --color=always --group-directories-first"
@@ -107,4 +119,3 @@ ex ()
   fi
 }
 
-PATH=$PATH:/Users/uriel/.lyftkube-bin
