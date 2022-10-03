@@ -57,7 +57,7 @@ ZSH_DISABLE_COMPFIX="true"
 # Lyft
 alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
 alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
-
+alias precommit="pre-commit run --all-files"
 # misc
 alias ll="exa -hal --color=always --group-directories-first"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
@@ -71,6 +71,7 @@ alias vim="nvim"
 alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
+alias diff='git diff'
 alias checkout='git checkout'
 alias clone='git clone'
 alias commit='git commit -m'
