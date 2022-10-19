@@ -1,3 +1,5 @@
 [user]
 	email = urielcoria@lyft.com
 	name = Uriel Coria
+[init]
+	defaultBranch = main
