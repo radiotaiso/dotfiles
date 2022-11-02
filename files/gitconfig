@@ -3,3 +3,5 @@
 	name = Uriel Coria
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true

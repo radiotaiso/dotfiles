@@ -39,6 +39,14 @@ brew bundle
 
 # Useful extras
 
+## Set-upstream sux
+
+From git 2.37.0 you can forget about the `--set-upstream <branch_name>` with a simple one time command
+```
+git config --global --add --bool push.autoSetupRemote true
+```
+Now, we don’t need to set upstream for every new branch manually. 
+
 ## How to update brewfile
 
 ```zsh
