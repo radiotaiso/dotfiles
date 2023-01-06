@@ -21,9 +21,6 @@ eval "$(/opt/homebrew/bin/aactivator init)"
 #        `-.__.-'`
 alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="lambda-uriel"
 
@@ -42,18 +39,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
 ZSH_DISABLE_COMPFIX="true"
 
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
+# TODO: Clean dis up pls, new alias file?
 # Lyft
 alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
 alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
@@ -66,7 +54,6 @@ alias nukenpm="rm -rf node_modules/ && rm package-lock.json"
 alias ptm="sudo !!"
 alias cat="bat --paging=never"
 alias vim="nvim"
-
 # git
 alias addup='git add -u'
 alias addall='git add .'
