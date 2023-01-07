@@ -1,8 +1,8 @@
-\.git 
-legacy
+.git 
 ^/.*\.md
 LICENSE
-\.gitignore
+.gitignore
 .DS_Store
 bin
 bundles
+legacy
