@@ -5,10 +5,6 @@ Home of my dotfiles, second iteration, using GNU Stow.
 # Pre-requisites
 
 ## Darwin
-
-# WTF IS THIS
-
-
 ```zsh
 xcode-select --install
 ```
