@@ -28,13 +28,14 @@ cd .bin
 ./da_wae
 ```
 
-3. Install Homebrew, followed by the software listed in the Brewfile.
-
+3. Install Homebrew, followed by the software listed in the Brewfile. `zsh` is used by default in macOS, so we only need to install oh-my-zsh.
+```zsh
 # Install Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 # Install brewfile
 ```
