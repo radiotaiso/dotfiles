@@ -44,10 +44,10 @@ cd bundles && brew bundle
 
 # Useful extras
 
-## Archived utilities
+## Archived utilities under `bin/stock-sux`
 
-- `/bin/stock-sux/Posy's Cursor.zip ` [Posy's improved cursors for Windows 10 (and older)](http://www.michieldb.nl/other/cursors/)
-- `/bin/stock-sux/Atkinson Hyperlegible.zip` [Braille Institute's high readability open source font](https://brailleinstitute.org/freefont)
+- `Posy's Cursor.zip ` [Posy's improved cursors for Windows 10 (and older)](http://www.michieldb.nl/other/cursors/)
+- `Atkinson Hyperlegible.zip` [Braille Institute's high readability open source font](https://brailleinstitute.org/freefont)
 
 ## Set-upstream sux
 
