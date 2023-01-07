@@ -1,40 +1,79 @@
-# dotfiles
-~~Simple~~ backup and deploy system settings
+# Introduction
 
-Now with `/etc` scripts support!
+Home of my dotfiles, second iteration, using GNU Stow.
+
+# Pre-requisites
+
+## Darwin
 
 # WTF IS THIS
 
-Inside of you there are two ~~wolves~~ branches `macos` and `linux`.
 
-One is too lazy to use a single script because paths are different in some config files and the other one can't be bothered to manually type it each time depending on which system so it's easier just to checkout the required branch.
-
-![dumb wolf gif](https://media1.tenor.com/images/e8cce4809ee3c6f3ee954ea6e25cd52f/tenor.gif?itemid=8702502)
-
-# Troubleshooting
-
-## Git Tips and Tricks
-
-### Moved from github to gitlab?
-
-```
-cd existing_repo
-git remote rename origin old-origin
-git remote add origin git@<newrepo>
+```zsh
+xcode-select --install
 ```
 
-### Need to override os default git user? try local
+## Other
+Not yet tested :(
 
-Git user and email is defined on each branch, `salsa for linux` and `github for macos`, talk about happy coincidences, huh.
+# This is what you came for
 
-If you need to use different emails, you must set up each repo with a local configuration file
+1. Clone repo 
+
+```zsh
+git clone git@salsa.debian.org:uriel/dotfiles.git .dotfiles
+cd .dotfiles
 ```
-git config --local user.name "Your Name"
-git config --local user.email "email@example.com"
+
+2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main` pop the stash and then the magic of `stow`.
+
+```zsh
+cd .bin
+./da_wae
 ```
-The local config will overwrite the global config. So you can use a global config for the most used account.
 
+3. Install Homebrew, followed by the software listed in the Brewfile.
 
-#### Source
-- [Managing Your Dotfiles With Git](https://medium.com/better-programming/managing-your-dotfiles-with-git-4dee603a19a2)
-- [Beyond Dotfiles by Fireshipio](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
+# Install Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install brewfile
+cd bundles && brew bundle
+```
+
+# Useful extras
+
+## Archived utilities
+
+- `/bin/stock-sux/Posy's Cursor.zip ` [Posy's improved cursors for Windows 10 (and older)](http://www.michieldb.nl/other/cursors/)
+- `/bin/stock-sux/Atkinson Hyperlegible.zip` [Braille Institute's high readability open source font](https://brailleinstitute.org/freefont)
+
+## Set-upstream sux
+
+From git 2.37.0 you can forget about the `--set-upstream <branch_name>` with a simple one time command
+```
+git config --global --add --bool push.autoSetupRemote true
+```
+Now, we don’t need to set upstream for every new branch manually. 
+
+## How to update brewfile
+If you already have one brewfile in the same path there's a paddlin'
+
+```zsh
+# Go to the dotfiles folder
+cd ~/.dotfiles 
+brew bundle dump
+```
+
+## Additional MacOS tips 
+
+```
+# Fuck autoboot, all my homies have to push the button to boot
+sudo nvram AutoBoot=%00 # Disable, %03 is default for enabled
+
+# Silent boot? Hell yeah
+sudo nvram BootAudio=%00 # Disable, enabled is %01
+```

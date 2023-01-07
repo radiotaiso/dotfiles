@@ -1,0 +1,8 @@
+\.git 
+legacy
+^/.*\.md
+LICENSE
+\.gitignore
+.DS_Store
+bin
+bundles
