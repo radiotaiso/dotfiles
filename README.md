@@ -5,12 +5,21 @@ Home of my dotfiles, second iteration, using GNU Stow.
 # Pre-requisites
 
 ## Darwin
+Apple dev tools
 ```zsh
 xcode-select --install
 ```
 
-## Other
-Not yet tested :(
+Install Homebrew
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+## All
+Oh my zsh is cool
+```zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 # This is what you came for
 
@@ -25,15 +34,6 @@ git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 ```zsh
 cd .bin
 ./da_wae
-```
-
-3. Install Homebrew, followed by the software listed in the Brewfile. `zsh` is used by default in macOS, so we only need to install oh-my-zsh.
-```zsh
-# Install Oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 4. Install brewfile
