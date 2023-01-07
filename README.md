@@ -14,11 +14,10 @@ Not yet tested :(
 
 # This is what you came for
 
-1. Clone repo 
+1. Clone repo, it's built around the assumption that it lives in your `$HOME` folder.
 
 ```zsh
-git clone git@salsa.debian.org:uriel/dotfiles.git .dotfiles
-cd .dotfiles
+git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 ```
 
 2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main` pop the stash and then the magic of `stow`.
