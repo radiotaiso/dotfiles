@@ -38,7 +38,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 4. Install brewfile
 ```zsh
-cd bundles && brew bundle
+brew bundle --file ~/.dotfiles/bundles/Brewfile
 ```
 
 # Useful extras
