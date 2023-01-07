@@ -6,7 +6,8 @@ Home of my dotfiles, second iteration, using GNU Stow.
 
 ## Darwin
 
-1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
+# WTF IS THIS
+
 
 ```zsh
 xcode-select --install
@@ -32,9 +33,6 @@ cd .bin
 ```
 
 3. Install Homebrew, followed by the software listed in the Brewfile.
-
-```zsh
-# These could also be in an install script.
 
 # Install Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -62,6 +60,7 @@ git config --global --add --bool push.autoSetupRemote true
 Now, we don’t need to set upstream for every new branch manually. 
 
 ## How to update brewfile
+If you already have one brewfile in the same path there's a paddlin'
 
 ```zsh
 # Go to the dotfiles folder
