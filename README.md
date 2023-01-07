@@ -4,7 +4,7 @@ Home of my dotfiles, second iteration, using GNU Stow.
 
 # Pre-requisites
 
-## Darwin
+### Darwin
 Apple dev tools
 ```zsh
 xcode-select --install
@@ -15,7 +15,7 @@ Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## All
+### All
 Oh my zsh is cool
 ```zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -43,29 +43,29 @@ brew bundle --file ~/.dotfiles/bundles/Brewfile
 
 # Useful extras
 
-## Archived utilities under `bin/stock-sux`
+### Archived utilities under `bin/stock-sux`
 
 - `Posy's Cursor.zip ` [Posy's improved cursors for Windows 10 (and older)](http://www.michieldb.nl/other/cursors/)
 - `Atkinson Hyperlegible.zip` [Braille Institute's high readability open source font](https://brailleinstitute.org/freefont)
 
-## Set-upstream is annoying
+### Set-upstream is annoying
 
 From git 2.37.0 you can forget about the `--set-upstream <branch_name>` with a simple one time command
 ```
 git config --global --add --bool push.autoSetupRemote true
 ```
-Now, we don’t need to set upstream for every new branch manually. 
+Now, the branch will be automatically created when `push`
 
-## How to update brewfile
+### How to update brewfile
 If you already have one brewfile in the same path there's a paddlin'
 
 ```zsh
-# Go to the dotfiles folder
-cd ~/.dotfiles 
+# Bundle files live here
+cd ~/.dotfiles/bundles 
 brew bundle dump
 ```
 
-## Additional MacOS tips 
+### Additional MacOS tips 
 
 ```
 # Fuck autoboot, all my homies have to push the button to boot
