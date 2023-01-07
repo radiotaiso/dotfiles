@@ -1,4 +1,10 @@
-# Steps to bootstrap a new Mac
+# Introduction
+
+Home of my dotfiles, second iteration, using GNU Stow.
+
+# Pre-requisites
+
+## Darwin
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
@@ -6,22 +12,26 @@
 xcode-select --install
 ```
 
-2. Clone repo and checkout MacOS branch. 
+## Other
+Not yet tested :(
+
+# This is what you came for
+
+1. Clone repo 
 
 ```zsh
 git clone git@salsa.debian.org:uriel/dotfiles.git .dotfiles
 cd .dotfiles
-git checkout macos-lyft
 ```
 
-3. Create symlinks in the Home directory to the real files in the repo.
+2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main` pop the stash and then the magic of `stow`.
 
 ```zsh
-chmod +x make-dot-symlinks.sh
-./make-dot-symlinks.sh # Backups are stored in dotfiles/backups
+cd .bin
+./da_wae
 ```
 
-4. Install Homebrew, followed by the software listed in the Brewfile.
+3. Install Homebrew, followed by the software listed in the Brewfile.
 
 ```zsh
 # These could also be in an install script.
@@ -31,13 +41,17 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-cd .dotfiles
 
 # Install brewfile
-brew bundle
+cd bundles && brew bundle
 ```
 
 # Useful extras
+
+## Archived utilities
+
+- `/bin/stock-sux/Posy's Cursor.zip ` [Posy's improved cursors for Windows 10 (and older)](http://www.michieldb.nl/other/cursors/)
+- `/bin/stock-sux/Atkinson Hyperlegible.zip` [Braille Institute's high readability open source font](https://brailleinstitute.org/freefont)
 
 ## Set-upstream sux
 
@@ -55,7 +69,7 @@ cd ~/.dotfiles
 brew bundle dump
 ```
 
-## MacOS tips 
+## Additional MacOS tips 
 
 ```
 # Fuck autoboot, all my homies have to push the button to boot

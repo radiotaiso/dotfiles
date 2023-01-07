@@ -3,6 +3,6 @@ legacy
 ^/.*\.md
 LICENSE
 \.gitignore
-Brewfile
 .DS_Store
-legacy
+bin
+bundles
