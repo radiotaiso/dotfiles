@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # go/Lyftenv
-PATH=$PATH:/Users/uriel/.lyftkube-bin
+PATH=$PATH:/Users/urielcoria/.lyftkube-bin
 export PATH=$HOME/src/lyftvenv/bin:$PATH 
 eval "$(/opt/homebrew/bin/aactivator init)"
 # This secret line of code will help us 
