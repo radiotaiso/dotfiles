@@ -1,51 +1,17 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
-
-# go/Lyftenv
-PATH=$PATH:/Users/uriel/.lyftkube-bin
-export PATH=$HOME/src/lyftvenv/bin:$PATH 
-eval "$(/opt/homebrew/bin/aactivator init)"
-# This secret line of code will help us 
-# save a fuck ton of cpu sorry employer wasnt me 
-#         .-"""-.
-#        /       \
-#        \       /
-# .-"""-.-`.-.-.<  _
-#/      _,-\ ()()_/:)
-#\     / ,  `     `|
-# '-..-| \-.,___,  /
-#       \ `-.__/  /
-#        `-.__.-'`
-alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
+source $ZSH/oh-my-zsh.sh
+source $ZSH/custom/lyftrc
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="lambda-uriel"
-
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
-
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
 ZSH_DISABLE_COMPFIX="true"
 
-# TODO: Clean dis up pls, new alias file?
-# Lyft
-alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
-alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
-alias precommit="pre-commit run --all-files"
 # misc
 alias ll="exa -hal --color=always --group-directories-first"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
@@ -107,10 +73,3 @@ ex ()
   fi
 }
 
-
-### lyft_localdevtools_shell_rc start
-### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
-if [[ -f "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh" ]]; then
-    source "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh"
-fi
-### lyft_localdevtools_shell_rc end
