@@ -36,7 +36,7 @@ cd .bin
 ./da_wae
 ```
 
-4. Install brewfile
+3. Install brewfile
 ```zsh
 brew bundle --file ~/.dotfiles/bundles/Brewfile
 ```
@@ -50,7 +50,7 @@ brew bundle --file ~/.dotfiles/bundles/Brewfile
 
 ### Set-upstream is annoying
 
-From git 2.37.0 you can forget about the `--set-upstream <branch_name>` with a simple one time command
+From git `2.37.0` you can forget about the `--set-upstream <branch_name>` with a simple one time command
 ```
 git config --global --add --bool push.autoSetupRemote true
 ```
@@ -74,3 +74,8 @@ sudo nvram AutoBoot=%00 # Disable, %03 is default for enabled
 # Silent boot? Hell yeah
 sudo nvram BootAudio=%00 # Disable, enabled is %01
 ```
+
+#### Sources
+
+[Primes 0 to LSP](https://www.youtube.com/watch?v=w7i4amO_zaE)
+[Systemcrafters managing dotfiles with GNU Stow](https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/)
