@@ -7,7 +7,7 @@ ZSH_THEME="lambda-uriel"
 DISABLE_UPDATE_PROMPT="true"
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
-plugins=(sudo macos )
+plugins=(sudo macos)
 ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
