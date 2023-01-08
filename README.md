@@ -29,7 +29,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 ```
 
-2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main` pop the stash and then the magic of `stow`.
+2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main`, pop the stash and then the magic of `stow`.
 
 ```zsh
 cd .bin
@@ -67,7 +67,7 @@ brew bundle dump
 
 ### Additional MacOS tips 
 
-```
+```zsh
 # Fuck autoboot, all my homies have to push the button to boot
 sudo nvram AutoBoot=%00 # Disable, %03 is default for enabled
 
@@ -77,5 +77,5 @@ sudo nvram BootAudio=%00 # Disable, enabled is %01
 
 #### Sources
 
-[Primes 0 to LSP](https://www.youtube.com/watch?v=w7i4amO_zaE)
-[Systemcrafters managing dotfiles with GNU Stow](https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/)
+* [Primes 0 to LSP](https://www.youtube.com/watch?v=w7i4amO_zaE)
+* [Systemcrafters managing dotfiles with GNU Stow](https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/)
