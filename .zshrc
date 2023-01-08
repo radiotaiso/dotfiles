@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/lyftrc
-
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="lambda-uriel"
 # Uncomment the following line to automatically update without prompting.
@@ -12,6 +10,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 plugins=(git)
 ZSH_DISABLE_COMPFIX="true"
 
+source $ZSH/oh-my-zsh.sh
 # misc
 alias ll="exa -hal --color=always --group-directories-first"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
@@ -34,8 +33,8 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias glog="git log --oneline --decorate --graph"
 
-### Functions
 
+### Functions
 # usage: mkfile path/to/file.wav
 mkfile() {mkdir -p $(sed 's/\(.*\)\/.*/\1/' <<< $1) && touch $1}
 
