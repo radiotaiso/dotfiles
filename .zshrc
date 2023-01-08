@@ -7,7 +7,7 @@ ZSH_THEME="lambda-uriel"
 DISABLE_UPDATE_PROMPT="true"
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
-plugins=(git)
+plugins=(sudo macos )
 ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
@@ -16,7 +16,6 @@ alias ll="exa -hal --color=always --group-directories-first"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
 alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperature'"
 alias nukenpm="rm -rf node_modules/ && rm package-lock.json"
-alias ptm="sudo !!"
 alias cat="bat --paging=never"
 alias vim="nvim"
 # git
@@ -35,9 +34,6 @@ alias glog="git log --oneline --decorate --graph"
 
 
 ### Functions
-# usage: mkfile path/to/file.wav
-mkfile() {mkdir -p $(sed 's/\(.*\)\/.*/\1/' <<< $1) && touch $1}
-
 # This function saves lives. thank god is stored here f o r e v e r.
 # usage: compresspdf path/to/bigfile.pdf path/to/smolfile.pdf ebook
 compresspdf() {
