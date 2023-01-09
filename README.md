@@ -32,8 +32,7 @@ git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main`, pop the stash and then the magic of `stow`.
 
 ```zsh
-cd .bin
-./da_wae
+./bin/da_wae
 ```
 
 3. Install brewfile
