@@ -21,23 +21,22 @@ Oh my zsh is cool
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-# This is what you came for
-
+# Setup
 1. Clone repo, it's built around the assumption that it lives in your `$HOME` folder.
 
 ```zsh
 git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 ```
 
-2. Execute `da_wae`. This script will stash unsaved stuff, pull from `main`, pop the stash and then the magic of `stow`.
+2. Install brewfile
+```zsh
+brew bundle --file ~/.dotfiles/bundles/Brewfile
+```
+
+3. Execute `da_wae`. This script will stash unsaved stuff, pull from `main`, pop the stash and then the magic of `stow`.
 
 ```zsh
 ./bin/da_wae
-```
-
-3. Install brewfile
-```zsh
-brew bundle --file ~/.dotfiles/bundles/Brewfile
 ```
 
 # Useful extras
