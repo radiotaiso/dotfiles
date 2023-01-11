@@ -16,11 +16,10 @@ eval "$(/opt/homebrew/bin/aactivator init)"
 #       \ `-.__/  /
 #        `-.__.-'`
 alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
-
-# Lyft
 alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
 alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
 alias precommit="pre-commit run --all-files"
+alias lyftme="runlyft -b master -d 'iPhone 14 Pro'"
 
 if [[ -f "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh" ]]; then
     source "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh"
