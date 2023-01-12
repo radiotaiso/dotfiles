@@ -1,4 +1,6 @@
-require('smart-splits').setup({
+local ssplits = require('smart-splits')
+
+ssplits.setup({
   -- Ignored filetypes (only while resizing)
   ignored_filetypes = {
     'nofile',
@@ -31,8 +33,12 @@ require('smart-splits').setup({
     -- must be functions, they will be executed when
     -- entering or exiting the resize mode
     hooks = {
-      on_enter = nil,
-      on_leave = nil,
+        on_enter = function()
+            vim.notify('Entering resize mode')
+        end,
+        on_leave = function()
+            vim.notify('Exiting resize mode, bye')
+        end,
     },
   },
   -- ignore these autocmd events (via :h eventignore) while processing
@@ -49,3 +55,19 @@ require('smart-splits').setup({
   -- disable tmux navigation if current tmux pane is zoomed
   disable_tmux_nav_when_zoomed = true,
 })
+-- recommended mappings
+-- resizing splits
+-- these keymaps will also accept a range,
+-- for example `10<A-h>` will `resize_left` by `(10 * config.default_amount)`
+
+require('smart-splits').start_resize_mode()
+vim.keymap.set('n', '', ssplits.start_resize_mode)
+vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
+-- moving between splits
+vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
