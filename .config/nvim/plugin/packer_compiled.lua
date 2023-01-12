@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/urielcoria/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["smart-splits.nvim"] = {
+    loaded = true,
+    path = "/Users/urielcoria/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
+    url = "https://github.com/mrjones2014/smart-splits.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/urielcoria/.local/share/nvim/site/pack/packer/start/telescope.nvim",

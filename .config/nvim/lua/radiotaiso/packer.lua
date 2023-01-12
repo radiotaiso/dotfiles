@@ -44,5 +44,6 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+  use('mrjones2014/smart-splits.nvim')
 end)
 
