@@ -19,19 +19,7 @@ return require('packer').startup(function(use)
       end
   })
 
-  use {
-        'famiu/feline.nvim',
-        requires = {
-            {
-                'lewis6991/gitsigns.nvim',
-                requires = { 'nvim-lua/plenary.nvim' },
-                config = function()
-                    require('gitsigns').setup()
-                end,
-            },
-            'kyazdani42/nvim-web-devicons',
-        },
-  }
+  use('ojroques/nvim-hardline')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
