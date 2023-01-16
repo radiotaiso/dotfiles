@@ -45,7 +45,7 @@ brew bundle --file ~/.dotfiles/bundles/Brewfile
 
 - `Posy's Cursor.zip ` [Posy's improved cursors for Windows 10 (and older)](http://www.michieldb.nl/other/cursors/)
 - `Atkinson Hyperlegible.zip` [Braille Institute's high readability open source font](https://brailleinstitute.org/freefont)
-- `keychron_v1_radiotaiso_keymaps.json`[My custom keymaps using QMK/VIA](https://www.caniusevia.com/)
+- `keychron_v1_radiotaiso_keymaps.json` [My custom keymaps using QMK/VIA](https://www.caniusevia.com/)
 
 ### Set-upstream is annoying
 
