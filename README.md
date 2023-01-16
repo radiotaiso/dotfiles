@@ -64,8 +64,10 @@ cd ~/.dotfiles/bundles
 brew bundle dump
 ```
 
-### Additional MacOS tips 
+### MacOS tips 
 
+Chale zone, this fix only works for intel based Macs. 
+Once again i am the bringer of my own demise but also screw you Tim apple.
 ```zsh
 # Fuck autoboot, all my homies have to push the button to boot
 sudo nvram AutoBoot=%00 # Disable, %03 is default for enabled
