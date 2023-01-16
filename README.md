@@ -60,7 +60,7 @@ If you already have one brewfile in the same path there's a paddlin'
 
 ```zsh
 # Bundle files live here
-cd ~/.dotfiles/bundles 
+cd ~/.dotfiles/bin/bundles 
 brew bundle dump
 ```
 
