@@ -19,6 +19,19 @@ return require('packer').startup(function(use)
       end
   })
 
+  use {
+        'famiu/feline.nvim',
+        requires = {
+            {
+                'lewis6991/gitsigns.nvim',
+                requires = { 'nvim-lua/plenary.nvim' },
+                config = function()
+                    require('gitsigns').setup()
+                end,
+            },
+            'kyazdani42/nvim-web-devicons',
+        },
+  }
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
@@ -44,6 +57,5 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
-  use('mrjones2014/smart-splits.nvim')
 end)
 
