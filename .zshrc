@@ -2,7 +2,7 @@
 export ZSH="/home/$(whoami)/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="lambda-uriel"
+ZSH_THEME="blue-shift"
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
 # Uncomment the following line if pasting URLs and other text is messed up.
