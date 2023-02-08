@@ -18,6 +18,7 @@ alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperat
 alias nukenpm="rm -rf node_modules/ && rm package-lock.json"
 alias cat="bat --paging=never"
 alias vim="nvim"
+alias mnx="music next && music playing"
 # git
 alias addup='git add -u'
 alias addall='git add .'
