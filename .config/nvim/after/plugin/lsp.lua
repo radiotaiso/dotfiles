@@ -1,6 +1,7 @@
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
+require'lspconfig'.sourcekit.setup{}
 
 -- Fix Undefined global 'vim'
 lsp.configure('sumneko_lua', {
