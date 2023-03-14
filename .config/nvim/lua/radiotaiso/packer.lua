@@ -23,8 +23,12 @@ return require('packer').startup(function(use)
       run = 'make',
       cond = vim.fn.executable 'make' == 1
   }
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 -- Standalones or oneliners
-  use('ojroques/nvim-hardline')
+  -- use('ojroques/nvim-hardline')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
