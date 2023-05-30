@@ -33,7 +33,6 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias glog="git log --oneline --decorate --graph"
 
-
 ### Functions
 # This function saves lives. thank god is stored here f o r e v e r.
 # usage: compresspdf path/to/bigfile.pdf path/to/smolfile.pdf ebook
@@ -69,22 +68,3 @@ ex ()
   fi
 }
 
-
-### lyft_localdevtools_shell_rc start
-### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
-if [[ -f "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh" ]]; then
-    source "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh"
-fi
-### lyft_localdevtools_shell_rc end
-export PATH=/opt/homebrew/bin:$PATH
-
-
-### lyft_rd_shell_rc start
-### DO NOT REMOVE: automatically installed as part of Rancher Desktop setup
-if [[ -f /Users/urielcoria/.rd/shell_rc.sh ]]; then
-  source /Users/urielcoria/.rd/shell_rc.sh
-fi
-### lyft_rd_shell_rc end
-
-### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
-eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
