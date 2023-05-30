@@ -3,7 +3,10 @@
 # go/Lyftenv
 PATH=$PATH:/Users/urielcoria/.lyftkube-bin
 export PATH=$HOME/src/lyftvenv/bin:$PATH 
+export PATH=$PATH:$HOME/.rd/bin
 eval "$(/opt/homebrew/bin/aactivator init)"
+eval "$(/Users/urielcoria/src/idl/idldev-tool/bin/idldev init -)"
+eval "$(fnm env --use-on-cd)"
 # This secret line of code will help us 
 # save a fuck ton of cpu sorry employer wasnt me 
 #         .-"""-.
@@ -21,7 +24,7 @@ alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
 alias precommit="pre-commit run --all-files"
 alias lyftme="runlyft -b master -d 'iPhone 14 Pro'"
 alias ios-generate="./ios generate Lyft, Garage-UITests, PassengerAppUITestHelpers" 
-alias ios-generate-all="./ios generate Lyft-UITests, Driver-UITests"
+alias ios-generate-all="./ios generate Lyft, Lyft-UITests, Driver-UITests"
 alias ios-lint="./ios lint"
 alias ios-fix="./ios fix"
 
