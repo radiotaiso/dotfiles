@@ -5,13 +5,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 -- Nice colors always come first
-  use({
-      'folke/tokyonight.nvim',
-      as = 'tokyonight',
-      config = function()
-	      vim.cmd('colorscheme tokyonight')
-      end
-  })
+  use('folke/tokyonight.nvim')
 -- Telescope fuzzy finding 
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -27,9 +21,7 @@ return require('packer').startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use('github/copilot.vim')
 -- Standalones or oneliners
-  -- use('ojroques/nvim-hardline')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
@@ -58,5 +50,15 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+  -- Copilot stuff
+  use {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      event = "InsertEnter",
+      config = function()
+          require("copilot").setup({})
+      end,
+  }
+  -- Ends copilot stuff
 end)
 
