@@ -1,25 +1,11 @@
 # Introduction
 
-Home of my dotfiles, second iteration, using GNU Stow.
+Leaner and meaner this time on archbtw
 
-# Pre-requisites
+Manjaro comes with `zsh` and `p10k` setup pretty cool by default
 
-### Darwin
-Apple dev tools
-```zsh
-xcode-select --install
-```
-
-Install Homebrew
-```zsh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### All
-Oh my zsh is cool
-```zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+# Optional pre-reqs
+Enable AUR and install vs-codium
 
 # Setup
 1. Clone repo, it's built around the assumption that it lives in your `$HOME` folder.
@@ -28,9 +14,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 ```
 
-2. Install brewfile
+2. Install some kewl software
 ```zsh
-brew bundle --file ~/.dotfiles/bin/bundles/Brewfile
+pacman -Syu stow exa bat neovim
 ```
 
 3. Execute `da_wae`. This script will stash unsaved stuff, pull from `main`, pop the stash and then the magic of `stow`.
