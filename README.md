@@ -16,7 +16,7 @@ git clone https://github.com/radiotaiso/dotfiles.git ~/.dotfiles
 
 2. Install some kewl software
 ```zsh
-pacman -Syu stow exa bat neovim
+pacman -Syu stow exa bat neovim ripgrep lazyvim
 ```
 
 3. Execute `da_wae`. This script will stash unsaved stuff, pull from `main`, pop the stash and then the magic of `stow`.

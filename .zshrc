@@ -1,6 +1,4 @@
 # Manjaro powerline stuff
-# Use powerline
-
 USE_POWERLINE="true"
 # Has weird character width
 # Example:
