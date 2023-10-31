@@ -28,7 +28,7 @@ alias vim="nvim"
 alias mnx="music next && music playing"
 # git
 alias addup='git add -u'
-alias addall='git add .'
+alias addall='git add . && git status'
 alias branch='git branch'
 alias diff='git diff'
 alias checkout='git checkout'
