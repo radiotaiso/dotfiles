@@ -26,6 +26,7 @@ alias nukenpm="rm -rf node_modules/ && rm package-lock.json"
 alias cat="bat --paging=never"
 alias vim="nvim"
 alias mnx="music next && music playing"
+alias appium-start="appium --base-path /wd/hub"
 # git
 alias addup='git add -u'
 alias addall='git add . && git status'
@@ -85,3 +86,14 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+export ANDROID_HOME=/Users/urielcoria/Library/Android/sdk
+export PATH=$JAVA_HOME/bin:$PATH
+
+uiautomator () {
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+	export ANDROID_HOME=/Users/urielcoria/Library/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/tools
+	/Users/urielcoria/Library/Android/sdk/tools/bin/uiautomatorviewer
+}
