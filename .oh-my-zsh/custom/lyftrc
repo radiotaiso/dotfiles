@@ -25,6 +25,8 @@ alias lyftme="runlyft -b master -d 'iPhone 14 Pro'"
 alias ios-generate="./ios generate Lyft, DriverApp, Lyft-UITests, Driver-UITests, PassengerAppUITestHelpers, DriverAppUITestHelpers, App-UITests"
 alias ios-lint="./ios lint"
 alias ios-fix="./ios fix"
+alias dev-ios="cd ~/src/Lyft-iOS/"
+alias dev-andr="cd ~/src/instant-android/"
 ### lyft_localdevtools_shell_rc start
 ### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
 if [[ -f "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh" ]]; then
