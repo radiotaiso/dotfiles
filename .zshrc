@@ -33,7 +33,7 @@ alias clone='git clone'
 alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
-alias push='git push origin'
+alias push='git push origin && git status'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias glog="git log --oneline --decorate --graph"
 
