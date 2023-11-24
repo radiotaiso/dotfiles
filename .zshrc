@@ -23,19 +23,16 @@ alias ll="exa -hal --color=always --group-directories-first"
 alias nukenpm="rm -rf node_modules/ && rm package-lock.json"
 alias cat="bat --paging=never"
 alias vim="nvim"
-# git
-alias addup='git add -u'
-alias addall='git add .'
-alias branch='git branch'
-alias diff='git diff'
-alias checkout='git checkout'
-alias clone='git clone'
-alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-alias push='git push origin && git status'
-alias stat='git status'  # 'status' is protected name so using 'stat' instead
-alias glog="git log --oneline --decorate --graph"
+alias vi="nvim"
+alias ls="exa --color=always --group-directories-first"
+
+# common zsh manjaro aliases
+alias update='sudo pacman -Syu'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -R'
+alias search='pacman -Ss'
+alias clean='sudo pacman -Sc'
+
 
 ### Functions
 # This function saves lives. thank god is stored here f o r e v e r.
@@ -45,8 +42,7 @@ compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
 
-### ARCHIVE EXTRACTION
-# usage: ex <file>
+# Extract files - use: ex <file>
 ex ()
 {
   if [ -f "$1" ] ; then
