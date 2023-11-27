@@ -27,19 +27,6 @@ alias cat="bat --paging=never"
 alias vim="nvim"
 alias mnx="music next && music playing"
 alias appium-start="appium --base-path /wd/hub"
-# git
-alias addup='git add -u'
-alias addall='git add . && git status'
-alias branch='git branch'
-alias diff='git diff'
-alias checkout='git checkout'
-alias clone='git clone'
-alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-alias push='git push origin'
-alias stat='git status'  # 'status' is protected name so using 'stat' instead
-alias glog="git log --oneline --decorate --graph"
 
 ### Functions
 # This function saves lives. thank god is stored here f o r e v e r.
