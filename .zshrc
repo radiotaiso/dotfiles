@@ -27,6 +27,7 @@ alias cat="bat --paging=never"
 alias vim="nvim"
 alias mnx="music next && music playing"
 alias appium-start="appium --base-path /wd/hub"
+alias lg="lazygit"
 
 ### Functions
 # This function saves lives. thank god is stored here f o r e v e r.
