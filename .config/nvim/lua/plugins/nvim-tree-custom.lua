@@ -1,6 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
+    bind_to_cwd = true,
     filesystem = {
       filtered_items = {
         visible = true,
@@ -17,8 +18,7 @@ return {
     },
     group_empty_dirs = true,
     follow_current_file = {
-      enable = true,
-      hijack_cursor = true,
+      enabled = true,
       update_cwd = true,
     },
   },
