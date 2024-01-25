@@ -76,7 +76,6 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
-export ANDROID_HOME=/Users/urielcoria/.androidbin/lyft-android-sdk/android-sdk-4333796-unarchived/
 export PATH=$JAVA_HOME/bin:$PATH
 
 uiautomator () {
