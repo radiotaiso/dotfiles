@@ -76,6 +76,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+export ANDROID_HOME=/Users/urielcoria/.androidbin/lyft-android-sdk/android-sdk-4333796-unarchived/
 export PATH=$JAVA_HOME/bin:$PATH
 
 uiautomator () {
@@ -84,3 +85,6 @@ uiautomator () {
 	export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/tools
 	/Users/urielcoria/Library/Android/sdk/tools/bin/uiautomatorviewer
 }
+
+### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"

@@ -1,4 +1,5 @@
 return {
+  {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   opts = function()
@@ -60,4 +61,5 @@ return {
 
     return opts
   end,
+  }
 }
