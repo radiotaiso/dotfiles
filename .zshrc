@@ -1,3 +1,11 @@
+# zsh function that generates 3 random numbers between 1 and 905
+threeRand() {
+  for i in {1..3}; do
+    echo $((1 + RANDOM % 905))
+  done
+}
+pokeget $(threeRand)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -88,3 +96,4 @@ uiautomator () {
 
 ### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+
