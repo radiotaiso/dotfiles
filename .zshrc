@@ -27,7 +27,7 @@ ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 # misc
-alias ll="exa -hal --color=always --group-directories-first"
+alias ll="eza -hal --color=always --group-directories-first"
 alias maccpumetrics="sudo powermetrics --samplers smc |grep -i 'CPU die temperature'"
 alias macgpumetrics="sudo powermetrics --samplers smc |grep -i 'GPU die temperature'"
 alias nukenpm="rm -rf node_modules/ && rm package-lock.json"

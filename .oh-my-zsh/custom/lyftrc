@@ -18,8 +18,8 @@ eval "$(/Users/urielcoria/src/idl/idldev-tool/bin/idldev init -)"
 #       \ `-.__/  /
 #        `-.__.-'`
 alias killCode24="sudo launchctl unload /Library/LaunchDaemons/com.code42.service.plist"
-alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
-alias lyftkube="aws-okta exec zimride-sudo-developer -- lyftkube"
+alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft" 
+alias lyftkube="lyftkube"
 alias precommit="pre-commit run --all-files"
 alias lyftme="runlyft -b master -d 'iPhone 15 Pro'"
 alias ios-generate="./ios generate Lyft, DriverApp, Lyft-UITests, Driver-UITests, PassengerAppUITestHelpers, DriverAppUITestHelpers, App-UITests"
