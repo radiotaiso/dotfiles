@@ -1,1 +1,34 @@
 *.DS_Store
+
+# Neovim auto-generated files
+.config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
+.config/nvim/.neoconf.json
+.config/nvim/plugin/packer_compiled.lua
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Cache directories
+.cache/
+**/cache/
+
+# Logs
+*.log
+
+# Machine-specific configs (uncomment if needed)
+# .gitconfig-local
+# .zshrc-local
+
+# Oh My Zsh cache and logs
+.oh-my-zsh/log/
+.oh-my-zsh/cache/
+
+# Backup files
+*.backup
+*.bak
+*~
