@@ -3,3 +3,5 @@
 	name = Uriel Coria
 [push]
 	autoSetupRemote = true
+[safe]
+	directory = /Users/urielcoria/src/instant-android

@@ -1,9 +1,8 @@
 #!/bin/zsh
 
 # go/Lyftenv
-PATH=$PATH:/Users/urielcoria/.lyftkube-bin
-export PATH=$HOME/src/lyftvenv/bin:$PATH 
-export PATH=$PATH:$HOME/.rd/bin
+# Consolidated PATH exports to eliminate pollution - single optimized export
+export PATH="$HOME/src/lyftvenv/bin:$PATH:/Users/urielcoria/.lyftkube-bin:$HOME/.rd/bin"
 eval "$(/opt/homebrew/bin/aactivator init)"
 eval "$(/Users/urielcoria/src/idl/idldev-tool/bin/idldev init -)"
 # This secret line of code will help us 
@@ -22,18 +21,18 @@ alias runlyft="aws-okta exec zimride-client-team-access-readonly -- runlyft"
 alias lyftkube="lyftkube"
 alias precommit="pre-commit run --all-files"
 alias lyftme="runlyft -b master -d 'iPhone 15 Pro'"
-alias ios-generate="./ios generate Lyft, DriverApp, Lyft-UITests, Driver-UITests, PassengerAppUITestHelpers, DriverAppUITestHelpers, App-UITests"
+alias ios-generate="./ios generate Lyft, DriverApp, Lyft-UITests, Driver-UITests, PassengerAppUITestHelpers, DriverAppUITestHelpers, App-UITests,"
 alias ios-lint="./ios lint"
 alias ios-fix="./ios fix"
 alias dev-ios="cd ~/src/Lyft-iOS/"
 alias dev-andr="cd ~/src/instant-android/"
-### lyft_localdevtools_shell_rc start
+### lyft_localdevtools_shell_rc start (consolidated - was duplicated)
 ### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
 if [[ -f "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh" ]]; then
     source "/opt/homebrew/Library/Taps/lyft/homebrew-localdevtools/scripts/shell_rc.sh"
 fi
 ### lyft_localdevtools_shell_rc end
-export PATH=/opt/homebrew/bin:$PATH
+# PATH already includes /opt/homebrew/bin from localdevtools - removed duplicate
 
 ### lyft_rd_shell_rc start
 ### DO NOT REMOVE: automatically installed as part of Rancher Desktop setup
@@ -44,3 +43,28 @@ fi
 
 ### DO NOT REMOVE: automatically installed as part of Lyft local dev tool setup
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+
+# Lyft Android/Java Development Environment (moved from .zshrc)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+export ANDROID_HOME=/Users/urielcoria/.androidbin/lyft-android-sdk/android-sdk-4333796-unarchived/
+
+## PYENV 
+# Final consolidated PATH export with all Lyft tools
+export PATH="$PATH:$HOME/.pyenv/bin:$JAVA_HOME/bin"
+
+# Initialize pyenv
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# Initialize pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+
+#eval "$(aactivator init)"
+export APPLICATION_ENV="production"
+
+uiautomator () {
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+	export ANDROID_HOME=/Users/urielcoria/Library/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/tools
+	/Users/urielcoria/Library/Android/sdk/tools/bin/uiautomatorviewer
+}
